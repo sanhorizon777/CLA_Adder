@@ -1,0 +1,54 @@
+\TLV_version 1d: tl-x.org
+\SV
+/* verilator lint_off UNUSED*/  /* verilator lint_off DECLFILENAME*/  /* verilator lint_off BLKSEQ*/  /* verilator lint_off WIDTH*/  /* verilator lint_off SELRANGE*/  /* verilator lint_off PINCONNECTEMPTY*/  /* verilator lint_off DEFPARAM*/  /* verilator lint_off IMPLICIT*/  /* verilator lint_off COMBDLY*/  /* verilator lint_off SYNCASYNCNET*/  /* verilator lint_off UNOPTFLAT */  /* verilator lint_off UNSIGNED*/  /* verilator lint_off CASEINCOMPLETE*/  /* verilator lint_off UNDRIVEN*/  /* verilator lint_off VARHIDDEN*/  /* verilator lint_off CASEX*/  /* verilator lint_off CASEOVERLAP*/  /* verilator lint_off PINMISSING*/  /* verilator lint_off BLKANDNBLK*/  /* verilator lint_off MULTIDRIVEN*/  /* verilator lint_off WIDTHCONCAT*/  /* verilator lint_off ASSIGNDLY*/  /* verilator lint_off MODDUP*/  /* verilator lint_off STMTDLY*/  /* verilator lint_off LITENDIAN*/  /* verilator lint_off INITIALDLY*/  
+
+//Your Verilog/System Verilog Code Starts Here:
+`timescale 1ns/1ps
+
+module santanu_CLA_Adder(A,B,Cin,XOR_0,XOR_1,XOR_2,XOR_3,result);
+  input [3:0] A,B;
+  input Cin,XOR_0,XOR_1,XOR_2,XOR_3;
+  output [4:0] result;
+  wire [3:0] sum;
+  wire C1,C2,C3,C4;
+  
+  assign C1 = (A[0]&B[0])|(Cin&(A[0]|B[0])); 
+  assign C2 = (A[1]&B[1])|((A[0]&B[0])|(Cin&(A[0]|B[0]))&(A[1]|B[1]));
+  assign C3 = (A[2]&B[2])|((A[1]&B[1])|((A[0]&B[0])|(Cin&(A[0]|B[0]))&(A[1]|B[1]))&(A[2]|B[2]));
+  
+  assign C4 = (A[3]&B[3])|((A[2]&B[2])|((A[1]&B[1])|((A[0]&B[0])|(Cin&(A[0]|B[0]))&(A[1]|B[1]))&(A[2]|B[2]))&(A[3]|B[3]));
+  
+  assign sum[0] = XOR_0^Cin;
+  assign sum[1] = XOR_1^C1;
+  assign sum[2] = XOR_2^C2;
+  assign sum[3] = XOR_3^C3;
+  
+  assign result = {C4,sum[3:0]}; 
+  
+endmodule
+
+//Top Module Code Starts here:
+	module top(input logic clk, input logic reset, input logic [31:0] cyc_cnt, output logic passed, output logic failed);
+		logic  [3:0] A;//input
+		logic  [3:0] B;//input
+		logic  Cin;//input
+		logic  XOR_0;//input
+		logic  XOR_1;//input
+		logic  XOR_2;//input
+		logic  XOR_3;//input
+		logic  [4:0] result;//output
+//The $random() can be replaced if user wants to assign values
+		assign A = $random();
+		assign B = $random();
+		assign Cin = $random();
+		assign XOR_0 = $random();
+		assign XOR_1 = $random();
+		assign XOR_2 = $random();
+		assign XOR_3 = $random();
+		santanu_CLA_Adder santanu_CLA_Adder(.A(A), .B(B), .Cin(Cin), .XOR_0(XOR_0), .XOR_1(XOR_1), .XOR_2(XOR_2), .XOR_3(XOR_3), .result(result));
+	
+\TLV
+//Add \TLV here if desired                                     
+\SV
+endmodule
+
