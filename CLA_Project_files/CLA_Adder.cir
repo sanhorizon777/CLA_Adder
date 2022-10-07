@@ -1,0 +1,35 @@
+* C:\Users\Santanu\Desktop\eSim-workspace\Project_Backup\CLA_Adder\CLA_Adder.cir
+
+* EESchema Netlist Version 1.1 (Spice format) creation date: 07/10/2022 20:12:56
+
+* To exclude a component from the Spice Netlist add [Spice_Netlist_Enabled] user FIELD set to: N
+* To reorder the component spice node sequence add [Spice_Node_Sequence] user FIELD and define sequence: 2,1,0
+
+* Sheet Name: /
+U1  Net-_U1-Pad1_ Net-_U1-Pad2_ Net-_U1-Pad3_ Net-_U1-Pad4_ Net-_U1-Pad5_ Net-_U1-Pad6_ Net-_U1-Pad7_ Net-_U1-Pad8_ Net-_U1-Pad9_ Net-_U1-Pad10_ Net-_U1-Pad11_ Net-_U1-Pad12_ Net-_U1-Pad13_ Net-_U1-Pad14_ Net-_U1-Pad15_ Net-_U1-Pad16_ Net-_U1-Pad17_ Net-_U1-Pad18_ santanu_cla_adder		
+X3  Net-_U2-Pad4_ Net-_U2-Pad8_ Net-_X1-Pad3_ Net-_U4-Pad1_ 2_inp_XOR_new		
+X4  Net-_U2-Pad3_ Net-_U2-Pad7_ Net-_X1-Pad3_ Net-_U4-Pad2_ 2_inp_XOR_new		
+X2  Net-_U2-Pad2_ Net-_U2-Pad6_ Net-_X1-Pad3_ Net-_U4-Pad3_ 2_inp_XOR_new		
+X1  Net-_U2-Pad1_ Net-_U2-Pad5_ Net-_X1-Pad3_ Net-_U4-Pad4_ 2_inp_XOR_new		
+U4  Net-_U4-Pad1_ Net-_U4-Pad2_ Net-_U4-Pad3_ Net-_U4-Pad4_ Net-_U1-Pad10_ Net-_U1-Pad11_ Net-_U1-Pad12_ Net-_U1-Pad13_ adc_bridge_4		
+U5  Net-_U1-Pad14_ Net-_U1-Pad15_ Net-_U1-Pad16_ Net-_U1-Pad17_ Net-_U1-Pad18_ Result_MSB Result_3 result_2 Result_1 Result_LSB dac_bridge_5		
+v1  Net-_X1-Pad3_ GND DC		
+scmode1  SKY130mode		
+U2  Net-_U2-Pad1_ Net-_U2-Pad2_ Net-_U2-Pad3_ Net-_U2-Pad4_ Net-_U2-Pad5_ Net-_U2-Pad6_ Net-_U2-Pad7_ Net-_U2-Pad8_ Net-_U1-Pad1_ Net-_U1-Pad2_ Net-_U1-Pad3_ Net-_U1-Pad4_ Net-_U1-Pad5_ Net-_U1-Pad6_ Net-_U1-Pad7_ Net-_U1-Pad8_ adc_bridge_8		
+U3  Net-_U3-Pad1_ Net-_U1-Pad9_ adc_bridge_1		
+U6  Result_MSB plot_v1		
+U7  Result_3 plot_v1		
+U8  result_2 plot_v1		
+U9  Result_1 plot_v1		
+U10  Result_LSB plot_v1		
+v2  Net-_U2-Pad1_ GND DC		
+v3  Net-_U2-Pad2_ GND DC		
+v4  Net-_U2-Pad3_ GND DC		
+v5  Net-_U2-Pad4_ GND DC		
+v7  Net-_U2-Pad5_ GND DC		
+v8  Net-_U2-Pad6_ GND DC		
+v9  Net-_U2-Pad7_ GND DC		
+v10  Net-_U2-Pad8_ GND DC		
+v6  Net-_U3-Pad1_ GND DC		
+
+.end

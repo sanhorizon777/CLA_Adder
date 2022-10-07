@@ -1,0 +1,18 @@
+* Subcircuit XOR_new
+.subckt XOR_new net-_sc1-pad2_ net-_sc3-pad2_ net-_sc1-pad3_ net-_sc10-pad1_ 
+* c:\fossee\esim\library\subcircuitlibrary\xor_new\xor_new.cir
+xsc4 net-_sc10-pad2_ net-_sc3-pad2_ gnd gnd sky130_fd_pr__nfet_01v8
+xsc3 net-_sc10-pad2_ net-_sc3-pad2_ net-_sc1-pad3_ net-_sc1-pad3_ sky130_fd_pr__pfet_01v8
+xsc2 net-_sc1-pad1_ net-_sc1-pad2_ gnd gnd sky130_fd_pr__nfet_01v8
+xsc1 net-_sc1-pad1_ net-_sc1-pad2_ net-_sc1-pad3_ net-_sc1-pad3_ sky130_fd_pr__pfet_01v8
+xsc5 net-_sc5-pad1_ net-_sc3-pad2_ net-_sc1-pad3_ net-_sc1-pad3_ sky130_fd_pr__pfet_01v8
+xsc6 net-_sc10-pad1_ net-_sc1-pad1_ net-_sc5-pad1_ net-_sc1-pad3_ sky130_fd_pr__pfet_01v8
+xsc9 net-_sc10-pad3_ net-_sc1-pad2_ net-_sc1-pad3_ net-_sc1-pad3_ sky130_fd_pr__pfet_01v8
+xsc10 net-_sc10-pad1_ net-_sc10-pad2_ net-_sc10-pad3_ net-_sc1-pad3_ sky130_fd_pr__pfet_01v8
+xsc7 net-_sc10-pad1_ net-_sc1-pad2_ net-_sc7-pad3_ gnd sky130_fd_pr__nfet_01v8
+xsc11 net-_sc10-pad1_ net-_sc10-pad2_ net-_sc11-pad3_ gnd sky130_fd_pr__nfet_01v8
+xsc8 net-_sc7-pad3_ net-_sc3-pad2_ gnd gnd sky130_fd_pr__nfet_01v8
+xsc12 net-_sc11-pad3_ net-_sc1-pad1_ gnd gnd sky130_fd_pr__nfet_01v8
+* Control Statements
+
+.ends XOR_new
