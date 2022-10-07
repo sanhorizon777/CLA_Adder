@@ -274,7 +274,7 @@ endmodule
 2. Clone this project using the following command:</br>
 ```git clone https://github.com/sanhorizon777/CLA_Adder  ```</br>
 3. Change directory:</br>
-```cd eSim_project_files/CLA_Adder```</br>
+```cd CLA_Project_files/CLA_Adder```</br>
 4. Run ngspice:</br>
 ```ngspice CLA_Adder.cir.out```</br>
 5. To run the project in eSim:
